@@ -1,0 +1,50 @@
+{
+  "name": "bpmn-js-sticky-lane-labels",
+  "version": "0.1.0",
+  "description": "Sticky lane and participant labels for bpmn-js",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "dist",
+    "src/*.d.ts",
+    "styles.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css",
+    "test/**/*.js"
+  ],
+  "scripts": {
+    "all": "npm run lint && npm test && npm run build",
+    "build": "rollup --config rollup.config.cjs",
+    "lint": "eslint src test",
+    "test": "karma start karma.config.cjs"
+  },
+  "peerDependencies": {
+    "bpmn-js": "^18.31.1",
+    "diagram-js": "^15.28.0"
+  },
+  "dependencies": {
+    "tiny-svg": "^4.1.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "bpmn-font": "^0.13.0",
+    "bpmn-js": "^18.31.1",
+    "chai": "^6.2.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-bpmn-io": "^2.4.0",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher-2": "^3.3.0",
+    "karma-mocha": "^2.0.1",
+    "karma-webpack": "^5.0.1",
+    "mocha": "^12.0.2",
+    "mocha-test-container-support": "0.2.0",
+    "rollup": "^4.63.3",
+    "webpack": "^5.111.1"
+  }
+}
